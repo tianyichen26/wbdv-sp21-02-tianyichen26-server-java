@@ -44,10 +44,10 @@
           <a class="nav-link" href="../profile/profile.template.client.html">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../login/login.template.client.html">Login</a>
+          <a class="nav-link" href="../register/register.template.client.html">Signup</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../register/register.template.client.html">Signup</a>
+          <a class="nav-link" href="../index.html">Logout</a>
         </li>
       </ul>
     </ul>
@@ -65,39 +65,29 @@
            aria-haspopup="true" aria-expanded="false">
           Owned By
         </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <div class="dropdown-menu" aria-labelledby="dropdown1">
           <a class="dropdown-item" href="#">Owned by me <i class="fas fa-check"></i></a>
           <a class="dropdown-item" href="#">Owned by anyone</a>
           <a class="dropdown-item" href="#">Not owned by me</a>
         </div>
       </div>
-      <div class="col-md-3">
-        Last modified by me
-      </div>
-      <div class="col-md-1">
-        <a href="../index.html"
-           class="grid-view-link">
-          <i class="fas fa-list-ul"></i>
-        </a>
-      </div>
-      <div class="col-md-1">
+      <div class="col-md-3 show">
         <a class="dropdown-toggle" href="#"
-           id="dropdownMenuSortLink" data-toggle="dropdown"
+           id="dropdownMenuLink2" data-toggle="dropdown"
            aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-sort"></i>
+          Last modified by
         </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuSortLink">
-          <a class="dropdown-item" href="#">Last modified by me
-            <i class="fas fa-check"></i>
-          </a>
-          <a class="dropdown-item" href="#">Last opened by me</a>
-          <a class="dropdown-item" href="#">Last modified</a>
-          <a class="dropdown-item" href="#">Title</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown2">
+          <a class="dropdown-item" href="#">Last modified by me <i class="fas fa-check"></i></a>
+          <a class="dropdown-item" href="#">Last modified by other</a>
+
         </div>
       </div>
     </div>
   </div>
 </div>
+<br>
+
 <div class="container course-list course-list-first">
   <div class="row modify-day">
     <div class="col-md-12">
@@ -106,17 +96,14 @@
   </div>
   <div class="row">
     <div class="card col-lg-2 col-md-3 ml-2 mb-2 mr-2">
-
-
       <div class="card-body">
         <p class="card-text">
           <a href="../course-editor/course-editor.template.client.html"
              class="course-title course-title-list">
-            CS 5610 Web Development
+            CS5800 Algorithm
           </a>
           <span class="date-sub-header">
-                            Opened at 6:45pm
-                        </span>
+                            Opened at 3:05pm</span>
           <i class="fas fa-times"></i>
         </p>
       </div>
@@ -127,17 +114,39 @@
         <p class="card-text">
           <a href="../course-editor/course-editor.template.client.html"
              class="course-title course-title-list">
-            CS 5340 Human Comp Interaction
+            Econ1200 MacroEconomics
           </a>
           <span class="date-sub-header">
-                            Opened at 6:44pm
+                            Opened at 9:28pm
                         </span>
           <i class="fas fa-times"></i>
         </p>
       </div>
     </div>
   </div>
+
+  <div class="card col-lg-2 col-md-3 ml-2 mb-2 mr-2">
+
+    <div class="card-body">
+      <p class="card-text">
+        <a href="../course-editor/course-editor.template.client.html"
+           class="course-title course-title-list">
+          ST2100 Statistics
+        </a>
+        <span class="date-sub-header">
+                            Opened at 5:53pm
+                        </span>
+        <i class="fas fa-times"></i>
+      </p>
+    </div>
+  </div>
+
 </div>
+
+
+
+
+
 
 <div class="container course-list">
   <div class="row modify-day">
@@ -152,10 +161,10 @@
         <p class="card-text">
           <a href="../course-editor/course-editor.template.client.html"
              class="course-title course-title-list">
-            CS 6350 Empirical Research Methods
+            Math1101 Intro to Calculus
           </a>
           <span class="date-sub-header">
-                            Opened on Sep 14, 2018
+                            Opened on Jan 28, 2021
                         </span>
           <i class="fas fa-times"></i>
         </p>
@@ -176,10 +185,10 @@
         <p class="card-text">
           <a href="../course-editor/course-editor.template.client.html"
              class="course-title course-title-list">
-            CS 5200 Intro to Database
+            CS5200 Intro to Database
           </a>
           <span class="date-sub-header">
-                            Opened on Sep 13, 2018
+                            Opened on Jan 26, 2021
                         </span>
           <i class="fas fa-times"></i>
         </p>
@@ -192,10 +201,10 @@
         <p class="card-text">
           <a href="../course-editor/course-editor.template.client.html"
              class="course-title course-title-list">
-            Web Dev Bootcamp
+            Career Hub
           </a>
           <span class="date-sub-header">
-                            Opened on Sep 12, 2018
+                            Opened on Jan 20, 2021
                         </span>
           <i class="fas fa-times"></i>
         </p>
@@ -204,12 +213,7 @@
   </div>
 </div>
 
-<div class="fixed-bottom">
-  <a class="float-right btn btn-danger new-course-btn new-course-btn-bottom"
-     href="course-editor/course-editor.template.client.html">
-    <i class="fas fa-plus"></i>
-  </a>
-</div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

@@ -3,7 +3,7 @@ body{
     padding-top: 60px;
 }
 
-.navbar-brand{
+.navbar-a{
     color:whitesmoke !important;
 }
 
@@ -11,13 +11,9 @@ body{
     background: black;
 }
 
-.close-editor{
-    font-size: 30px;
-    color: whitesmoke;
-}
 
-.course-editor-nav .nav-item .nav-link{
-    color: lightblue !important;
+.editor-nav .nav-item .nav-link{
+    color: whitesmoke !important;
 }
 
 .course-editor-nav .nav-item{
@@ -38,35 +34,32 @@ body{
     padding:30px;
 }
 
-.module-list-pill{
-    margin-top: 25px;
-    margin-bottom: 20px;
-    margin-left:5px;
-}
 
-.module-list-pill .nav-link{
+
+.module-list .nav-link{
     background-color: darkgrey;
     color:whitesmoke;
 }
 
 
+.widget-name{
+    font-weight: bold;
+    font-size:22px;
+}
 
-.topic-pill-list .nav-link{
+.topic-list .nav-link{
     background-color: rgba(0,0,0,.18);
     color: black;
 }
 
 .heading-widget{
-    border:1px solid gray;
+    border:2px solid gray;
     border-radius: 10px;
     padding:10px;
     margin:1px;
 }
 
-.widget-name{
-    font-weight: bold;
-    font-size:22px;
-}
+
 
 
 

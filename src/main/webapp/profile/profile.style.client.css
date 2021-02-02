@@ -1,0 +1,10 @@
+body{
+    padding-top:60px;
+    background-color: lightblue;
+
+}
+.profile-update-form{
+    background-color: grey;
+    padding: 30px 40px 20px;
+    border-radius:20px;
+}

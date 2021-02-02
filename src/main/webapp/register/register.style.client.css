@@ -1,5 +1,13 @@
-<h1>Register</h1>
-Username: <input id="usernameFld"/>
-Password: <input id="passwordFld"/>
-Verify Password: <input id="verifyPasswordFld"/>
-<button id="registerBtn">Register</button>
+body{
+    background-color: lightblue;
+    color:beige;
+}
+
+.signup-form{
+    background-color: grey;
+    padding:30px;
+    border-radius:10px;
+}
+
+
+

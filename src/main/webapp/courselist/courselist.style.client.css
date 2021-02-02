@@ -1,0 +1,68 @@
+body{
+    background-color: white;
+}
+
+.custom-form input[type="text"]{
+    width:400px !important;
+    margin-right: 5px
+}
+
+.new-course-btn{
+    border-radius:60% !important;
+    background-color: lightblue;
+    border: none;
+}
+.date-sub-header{
+  margin:200px;
+}
+
+.modify-user-header{
+  margin:0px;
+}
+.new-course-btn-bottom{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin: 30px;
+}
+.fa-plus{
+    color: white;
+}
+
+.course-header-row{
+    margin-top:60px;
+    padding:15px;
+    font-weight: bold;
+}
+
+.course-list-first{
+    margin-top:80px;
+}
+
+
+
+.course-title{
+    color: black;
+    font-weight: bold;
+}
+
+.course{
+    padding-top:40px;
+    padding-bottom:20px;
+
+}
+
+
+.card-body{
+    background: lightblue !important;
+    width:900px;
+    height: 70px;
+}
+
+
+.course-title-list:hover{
+    text-decoration: none;
+}
+
+
+

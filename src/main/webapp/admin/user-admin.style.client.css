@@ -1,0 +1,18 @@
+body {
+    background-color: #283747;
+    color:whitesmoke;
+    padding-top:50px;
+}
+
+.wbdv-remove{
+    color:red;
+}
+
+.wbdv-edit{
+    color:black;
+}
+
+.wbdv-search, .wbdv-create, .wbdv-update{
+    color: black;
+    font-size:30px;
+}

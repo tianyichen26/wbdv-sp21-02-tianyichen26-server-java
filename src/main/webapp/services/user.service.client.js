@@ -6,51 +6,52 @@ function AdminUserServiceClient() {
     this.deleteUser = deleteUser;
     this.updateUser = updateUser;
     this.url = 'https://wbdv-generic-server.herokuapp.com/api/chen.tianyi/users';
-
     var self = this;
-
     var users = [];
 
     function createUser(user) {
-        users.push(user);
-        return users;
+     return fetch(self.url, {
+       method: 'POST',
+       body: JSON.stringify(user),
+       headers: {
+         'content-type': 'application/json'
+       }
+     }).then(function (response) {
+       return response.json()
+     })
     }
 
 
     function findAllUsers() {
-        return $.getJSON("../admin/users.json",function (data) {
-                users = data;
-                return users;
+        return fetch(self.url)
+            .then((response) => {
+               return response.json()
+           })
+    }
+
+
+    function findUserById(id) {
+        return fetch(`${self.url}/${id}`)
+            .then((response) => {
+                return response.json()
+            })
+    }
+
+    function updateUser(id, user) {
+        return fetch(`${self.url}/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify(user),
+            headers: {
+                "content-type": "application/json"
+            }
+        }).then(response => response.json())
+    }
+
+
+    function deleteUser(id) {
+        return fetch(`${self.url}/${id}`, {
+            method: "DELETE"
         })
-    }
-
-
-    function findUserById(userId) {
-        for (var i = 0; i < users.length; i++) {
-            if(users[i].id==userId){
-                return users[i];
-            }
-        }
-    }
-
-    function updateUser(userId, user) {
-        for (var i = 0; i < users.length; i++) {
-            if(users[i].id==userId){
-                users[i] = user;
-                return users;
-            }
-        }
-    }
-
-
-    function deleteUser(userId) {
-        for (var i = 0; i < users.length; i++) {
-            if(users[i].id==userId){
-                users.splice(i,1);
-                break;
-            }
-        }
-        return users;
     }
 
 

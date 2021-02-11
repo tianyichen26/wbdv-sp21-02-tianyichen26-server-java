@@ -1,115 +1,101 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width,
-          initial-scale=1">
-  <title>User Admin</title>
-  <link rel="stylesheet" href=
-      "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <link href="user-admin.style.client.css" rel="stylesheet" />
-  <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="admin-user.service.client.js"></script>
-  <script src="admin-user.controller.client.js"></script>
+        initial-scale=1.0" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet">
 
+  <link href="user-admin.style.client.css" rel="stylesheet">
+  <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+  </script>
+  <script src="/services/user.service.client.js"></script>
+  <script src="/model/user.model.client.js"></script>
+  <script src="user-admin.controller.client.js"></script>
+  <title>Admin page</title>
 </head>
 <body>
-<nav class="navbar fixed-top navbar-light custom-navbar">
-  <button class="navbar-toggler mr-2"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavDropdown">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand mr-auto d-none d-sm-block" href="../index.html">
-    <img src="../images/brand-icon.png">Course Manager
-  </a>
-  <div class="collapse navbar-collapse"
-       id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="../index.html">Home</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Admin</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../login/login.template.client.html">Sign In</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../register/register.template.client.html">Sign Up</a>
-        </li>
-      </ul>
-    </ul>
-  </div>
-</nav>
-<div class="container-fluid">
-  <div class="row table-wrapper">
-    <div class="text-center col-md-12">
-      <img src="../images/user-management.png">
-      <h2>ADMIN: User Management</h2>
-    </div>
-    <div class="col-md-12 table-responsive-sm table-striped">
-      <table class="table table-bordered">
-        <thead>
-        <tr>
-          <th>Username</th>
-          <th>Password</th>
-          <th>Email</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Role</th>
-          <th>&nbsp;</th>
-        </tr>
-        <tr class="wbdv-form">
-          <td><input type="text" id="usernameFld" class="form-control"
-                     placeholder="Username" /></td>
-          <td><input type="password" id="passwordFld" class="form-control"
-                     placeholder="Password" /></td>
-          <td><input type="email" id="emailFld" class="form-control"
-                     placeholder="Email" /></td>
-          <td><input type="text" id="firstNameFld" class="form-control"
-                     placeholder="First Name" /></td>
-          <td><input type="text" id="lastNameFld" class="form-control"
-                     placeholder="Last Name" /></td>
-          <td><select id="roleFld" class="form-control">
-            <option value="" selected disabled>Role</option>
-            <option value="FACULTY">Faculty</option>
-            <option value="STUDENT">Student</option>
-            <option value="ADMIN">Admin</option>
-          </select>
-          </td>
-          <td><span class="float-right">
-                                    <i class="fa fa-search wbdv-search" id="searchBtn"></i>
-                                    <i class="fa fa-plus wbdv-create" id="createBtn"></i>
-                                    <i class="fa fa-check wbdv-update"></i>
-                                 </span>
-          </td>
-        </tr>
-        </thead>
-        <tbody class="wbdv-tbody">
-        <tr class="wbdv-template wbdv-user wbdv-hidden">
-          <td class="wbdv-username">ada</td>
-          <td class="wbdv-password">******</td>
-          <td class="wbdv-email">ada@gmail.com</td>
-          <td class="wbdv-first-name">Ada</td>
-          <td class="wbdv-last-name">Lovelace</td>
-          <td class="wbdv-role">FACULTY</td>
-          <td class="wbdv-actions">
-                                <span class="float-right">
-                                  <i class="fa fa-times wbdv-remove"></i>
-                                  <i class="fa fa-pencil wbdv-edit"></i>
-                                </span>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+
+<h1 class="darkblue">CourseManager-user-admin</h1>
+<div class="table-responsive-sm">
+  <table class="table table-fixed">
+    <thead>
+    <tr class="bg-primary">
+      <th class="text-black">Username</th>
+      <th class="text-black">Password</th>
+      <th class="text-black">FirstName</th>
+      <th class="text-black">LastName</th>
+      <th class="text-black">Role</th>
+      <th></th>
+    </tr>
+
+
+    <tr class="wbdv-form bg-secondary">
+      <td>
+        <input id="usernameFld"
+               class="form-control w-auto"
+               placeholder="ex:John"
+      </td>
+
+      <td>
+        <input id="passwordFld"
+               class="form-control w-auto"
+               placeholder="123asdf%&*"
+               type="password"
+      </td>
+      <td>
+        <input id="firstNameFld"
+               class="form-control w-auto"
+               placeholder="John"
+
+      </td>
+      <td>
+        <input id="lastNameFld"
+               placeholder="Snow"
+               class="form-control w-auto"
+      </td>
+      <td>
+        <select id="roleFld" class="form-control">
+          <option value="FACULTY">Student</option>
+          <option value="STUDENT">Faculty</option>
+          <option value="ADMIN">Admin</option>
+        </select>
+      </td>
+      <td>
+            <span class="float-right wbdv-button-span">
+              <i class="fa fa-search wbdv-search mr-sm-2"></i>
+              <i class="fa fa-plus wbdv-create mr-sm-2"></i>
+              <i class="fa fa-check wbdv-update mr-sm-2"></i>
+            </span>
+      </td>
+    </tr>
+
+    </thead>
+    <tbody class="wbdv-tbody">
+    <tr class="wbdv-template wbdv-user  table-secondary">
+      <td class="web-username"></td>
+      <td class ="web-password">******</td>
+      <td class="web-firstname"></td>
+      <td class="web-lastname"></td>
+      <td class="web-role"></td>
+      <td class="wbdv-actions">
+        <span class="float-right">
+          <i id="wbdv-remove" class="fa-2x fa fa-times wbdv-remove mr-sm-2"></i>
+          <i id="wbdv-edit" class="fa-2x fa fa-pencil wbdv-edit mr-sm-2"></i>
+        </span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
 </div>
+
 </body>
+</html>
